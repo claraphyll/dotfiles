@@ -21,7 +21,7 @@ set $menu 'rofi -show drun'
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
 #
 # Example configuration:
 #
@@ -51,7 +51,7 @@ exec swayidle -w \
 input "type:keyboard" {
     xkb_layout eu
 }
-input "1267:23:Elan_Touchpad" {
+input "type:touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
