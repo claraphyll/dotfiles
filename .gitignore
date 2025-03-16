@@ -1,4 +1,5 @@
 *
 !.gitignore
 !mpv*
-!sway*
+!sway
+!sway/*
