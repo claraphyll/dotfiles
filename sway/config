@@ -220,6 +220,8 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86NotificationCenter exec playerctl play-pause
     bindsym --locked XF86PickupPhone exec playerctl previous
     bindsym --locked XF86HangupPhone exec playerctl next
+    bindsym $mod+m exec swaylock -f -c 000000
+
 
 #
 # Status Bar:
