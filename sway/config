@@ -38,6 +38,9 @@ exec swayidle -w \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
          timeout 900 'systemctl sleep' \
          before-sleep 'swaylock -f -c 000000'
+
+# Mess with audio
+exec easyeffects --gapplication-service
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -71,7 +74,6 @@ input "type:pointer" {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+P exec rofi-rbw
     bindsym $mod+Return exec $term
 
     # Kill focused window
@@ -222,6 +224,8 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86HangupPhone exec playerctl next
     bindsym $mod+m exec swaylock -f -c 000000
     bindsym $mod+period exec rofimoji
+    bindsym $mod+P exec rofi-rbw
+    bindsym $mod+Shift+P exec seniormenu --menu 'rofi -dmenu' --dotool 'wtype -' --type
 
 #
 # Status Bar:
