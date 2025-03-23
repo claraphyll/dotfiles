@@ -18,6 +18,10 @@ set $term alacritty
 # Your preferred application launcher
 set $menu 'rofi -show drun -show-icons'
 
+# "I would like to disable middle click paste" - user
+# "Don't middle-click." - sway maintainer
+primary_selection disable
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
