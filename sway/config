@@ -16,7 +16,9 @@ set $right l
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
-set $menu 'rofi -show drun -show-icons'
+set $menu 'rofi -show combi -modes combi -combi-modes "drun,window" -show-icons'
+set $windowmenu 'rofi -show window -show-icons'
+# set $menu 'rofi -show drun -show-icons'
 
 # "I would like to disable middle click paste" - user
 # "Don't middle-click." - sway maintainer
@@ -85,6 +87,7 @@ input "type:pointer" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Shift+d exec $windowmenu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.

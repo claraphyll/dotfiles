@@ -1,0 +1,5 @@
+configuration {
+    kb-row-down: "Alt+j";
+    kb-row-up: "Alt+k";
+}
+@theme "/usr/share/rofi/themes/android_notification.rasi"
