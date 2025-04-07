@@ -64,12 +64,14 @@ input "type:touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
-    middle_emulation enabled
+    # Makes click slower
+    # middle_emulation enabled
 }
 
 input "type:pointer" {
     accel_profile flat
     pointer_accel 0.125
+    scroll_factor 0.5
 }
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -231,6 +233,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
     bindsym Print exec '/usr/share/sway-contrib/grimshot copy anything'
+    bindsym Shift+Print exec '/usr/share/sway-contrib/grimshot copy screen'
     bindsym --locked XF86NotificationCenter exec playerctl play-pause
     bindsym --locked XF86PickupPhone exec playerctl previous
     bindsym --locked XF86HangupPhone exec playerctl next
