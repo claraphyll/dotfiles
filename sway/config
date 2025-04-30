@@ -70,7 +70,7 @@ input "type:touchpad" {
 
 input "type:pointer" {
     accel_profile flat
-    pointer_accel 0.125
+    pointer_accel 0.15
     scroll_factor 0.5
 }
 #
@@ -106,6 +106,17 @@ input "type:pointer" {
 #
 # Moving around:
 #
+    # Move workspace to output https://stackoverflow.com/a/72704410
+    bindsym $mod+Ctrl+Shift+Left  move workspace to output left
+    bindsym $mod+Ctrl+Shift+Right move workspace to output right
+    bindsym $mod+Ctrl+Shift+Up move workspace to output up
+    bindsym $mod+Ctrl+Shift+Down move workspace to output down
+
+    bindsym $mod+Ctrl+$left  move workspace to output left
+    bindsym $mod+Ctrl+$right move workspace to output right
+    bindsym $mod+Ctrl+$up move workspace to output up
+    bindsym $mod+Ctrl+$down move workspace to output down
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
@@ -232,8 +243,8 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec '/usr/share/sway-contrib/grimshot copy anything'
-    bindsym Shift+Print exec '/usr/share/sway-contrib/grimshot copy screen'
+    bindsym Print exec '/usr/share/sway-contrib/grimshot savecopy anything'
+    bindsym Shift+Print exec '/usr/share/sway-contrib/grimshot savecopy screen'
     bindsym --locked XF86NotificationCenter exec playerctl play-pause
     bindsym --locked XF86PickupPhone exec playerctl previous
     bindsym --locked XF86HangupPhone exec playerctl next
@@ -246,9 +257,10 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
+focus_on_window_activation focus
 bar {
     swaybar_command waybar
 }
 
-gaps inner 3
+# gaps inner 3
 include /etc/sway/config.d/*
