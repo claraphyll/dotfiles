@@ -1,0 +1,5 @@
+nix:
+  enable: true  # false by default, except on NixOS
+  nix-shell-options:
+  - --keep
+  - STACK_XDG
