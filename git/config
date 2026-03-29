@@ -1,14 +1,24 @@
 [user]
-	email = public@complexvector.space
+	email = clara@complexvector.space
 	name = Clara Rostock
-	signingkey = ~/.ssh/id_ed25519
+	signingkey = /home/clara/.ssh/id_ed25519_sk_git_signing
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "https://gitlab.com"]
+	helper = 
+  helper = !glab auth git-credential
+[credential "https://gitlab.cs.fau.de"]
+	helper = 
+	helper = !glab auth git-credential
+[credential "https://github.com"]
+	helper = 
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !gh auth git-credential
+[push]
+	autoSetupRemote = true
 [gpg]
 	format = ssh
-[push]
-	autoSetupRemote = yes
-[http]
-	sslVerify = true
-[init]
-	defaultBranch = main
-# [submodule]
-# 	recurse = true
+[commit]
+        # gpgsign = true
