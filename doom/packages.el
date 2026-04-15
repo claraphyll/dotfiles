@@ -52,3 +52,5 @@
 ;; (unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
+
+(package! typst-ts-mode :recipe (:host codeberg :repo "meow_king/typst-ts-mode"))
