@@ -22,7 +22,7 @@
 ;; accept. For example:
 ;;
 (setq doom-font (font-spec :family "Iosevka")
-       doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -86,3 +86,7 @@
                    ,(eglot-alternatives `(,typst-ts-lsp-download-path
                                           "tinymist"
                                           "typst-lsp"))))))
+
+(setq auto-mode-alist
+      (cons '("\\.lagda\\.md\\'" . agda2-mode)
+            auto-mode-alist))
