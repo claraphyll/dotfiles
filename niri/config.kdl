@@ -76,6 +76,15 @@ input {
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
 
+// home
+output "Samsung Electric Company T27C350 Unknown" {
+  position x=-1920 y=0
+}
+
+output "ASUSTek COMPUTER INC ASUS VA24E NBLMTF098696" {
+  mode "1920x1080"
+}
+
 // manlobbi
 output "Philips Consumer Electronics Company PHL 499P9 AU02416012785" {
   mode "5120x1440"
@@ -276,7 +285,11 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
-spawn-at-startup "noctalia-shell"
+// if we have nixGL, assume noctalia-shell is installed through that
+// if i were sane i would just install nixos on my desktop atp instead of fixing
+// the graphics on my shell like this, but here we are
+spawn-sh-at-startup "nixGL noctalia-shell || ([ $? = 127 ] && noctalia-shell)"
+// spawn-at-startup "noctalia-shell"
 spawn-at-startup "kwalletd6"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:

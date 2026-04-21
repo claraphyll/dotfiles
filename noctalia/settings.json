@@ -463,7 +463,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Erlangen",
+        "name": "Nuremberg",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -658,7 +658,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/clara/Pictures/Wallpapers",
+        "directory": "/home/clr/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
