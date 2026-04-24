@@ -90,3 +90,5 @@
 (setq auto-mode-alist
       (cons '("\\.lagda\\.md\\'" . agda2-mode)
             auto-mode-alist))
+
+(add-hook! 'agda2-mode-hook (ligature-mode -1))
