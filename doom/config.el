@@ -91,4 +91,5 @@
       (cons '("\\.lagda\\.md\\'" . agda2-mode)
             auto-mode-alist))
 
+;; Iosevka ligatures are confusing because you can't tell the difference between - > and →
 (add-hook! 'agda2-mode-hook (ligature-mode -1))
