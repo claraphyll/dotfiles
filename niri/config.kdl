@@ -6,6 +6,10 @@
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
+environment {
+  _JAVA_AWT_WM_NONREPARENTING "1"
+}
+
 input {
     keyboard {
         xkb {
@@ -288,9 +292,10 @@ layout {
 // if we have nixGL, assume noctalia-shell is installed through that
 // if i were sane i would just install nixos on my desktop atp instead of fixing
 // the graphics on my shell like this, but here we are
-spawn-sh-at-startup "nixGL noctalia-shell || ([ $? = 127 ] && noctalia-shell)"
+// spawn-sh-at-startup "nixGL noctalia-shell || ([ $? = 127 ] && noctalia-shell)"
 // spawn-at-startup "noctalia-shell"
 spawn-at-startup "kwalletd6"
+spawn-at-startup "noctalia-shell"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -658,4 +663,8 @@ debug {
 
 switch-events {
   lid-close { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+}
+
+clipboard {
+  disable-primary
 }
