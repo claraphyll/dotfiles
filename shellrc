@@ -2,3 +2,9 @@ if [ $TERM = "xterm-kitty" ]; then
   alias ssh="kitty +kitten ssh"
   alias rg="rg --hyperlink-format=kitty"
 fi
+
+if [ -n "$ZSH_VERSION" ]; then
+  setopt inc_append_history
+fi
+
+# vim: ft=sh
