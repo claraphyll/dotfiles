@@ -3,6 +3,8 @@ if [ $TERM = "xterm-kitty" ]; then
   alias rg="rg --hyperlink-format=kitty"
 fi
 
+alias key="nitropy nk3 secrets get-otp wa28ziqo-adm"
+
 if [ -n "$ZSH_VERSION" ]; then
   setopt inc_append_history
 fi
