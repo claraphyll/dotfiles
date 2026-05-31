@@ -25,4 +25,4 @@
 [init]
 	defaultBranch = main
 [core]
-        fsmontior = true
+        fsmonitor = true
