@@ -19,7 +19,8 @@
         "overviewLayer": false,
         "pinnedApps": [
             "helium",
-            "thunderbird"
+            "thunderbird",
+            "element-desktop"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -466,7 +467,7 @@
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Nuremberg",
+        "name": "Erlangen",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
