@@ -1,7 +1,7 @@
 [user]
 	email = clara@complexvector.space
 	name = Clara Rostock
-	signingkey = ~/.ssh/id_ed25519
+	signingkey = ~/.ssh/id_ed25519.pub
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 [credential "https://gitlab.com"]
